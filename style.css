@@ -38,6 +38,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -47,6 +49,11 @@ body {
 .card {
   background-color: var(--card-bg) !important;
   color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .text-primary {
@@ -54,10 +61,11 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/salao1.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/salao1.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 500px;
   margin-top: 56px;
 }
 
@@ -67,7 +75,6 @@ body {
   right: 20px;
   width: 60px;
   height: 60px;
-  font-size: 30px;
   z-index: 1000;
 }
 
@@ -89,4 +96,142 @@ section {
 
 footer {
   background-color: var(--navbar-bg) !important;
+  margin-top: 0;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .carousel-item img {
+    height: 40vh;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .btn-custom {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+  }
+
+  footer .col-md-4 {
+    margin-bottom: 2rem;
+  }
+
+  .social-links {
+    text-align: center;
+  }
+
+  .payment-methods {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .carousel-item img {
+    height: 30vh;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Tema Escuro */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-theme .card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-theme .bg-light {
+  background-color: #2d2d2d !important;
+}
+
+/* Melhorias de Acessibilidade */
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Otimizações de Performance */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Melhorias de UX */
+.btn-custom {
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Lazy */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
 }
