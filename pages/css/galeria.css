@@ -1,0 +1,64 @@
+/* Cores principais */
+:root {
+  --primary-color: #C5A059;
+  --secondary-color: #1F3A5F;
+}
+
+body.light-theme {
+  background-color: #ffffff !important;
+  color: #000000;
+}
+
+body.dark-theme {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+.gallery-title {
+  color: var(--secondary-color);
+}
+
+.filter-buttons button,
+.btn-custom {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  margin: 2px;
+}
+
+.filter-buttons button.active,
+.btn-custom:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  object-fit: cover;
+  aspect-ratio: 4 / 5;
+}
+
+.btn-toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+} 

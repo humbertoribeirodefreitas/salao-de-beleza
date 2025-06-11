@@ -1,0 +1,92 @@
+/* Carrossel */
+.carousel {
+  margin-bottom: 30px;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators button {
+  background-color: #D8BFD8;
+}
+
+.carousel-indicators .active {
+  background-color: #2C3E50;
+}
+
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+  --navbar-bg: #343a40;
+  --primary-color: #000000;
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --navbar-bg: #000000;
+  --primary-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/salao1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: 56px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  z-index: 1000;
+}
+
+#themeToggle {
+  transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+  transform: rotate(180deg);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.bg-light {
+  background-color: var(--card-bg) !important;
+}
+
+footer {
+  background-color: var(--navbar-bg) !important;
+}

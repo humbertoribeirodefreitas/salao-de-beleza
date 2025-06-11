@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria de Serviços - Salão de Beleza</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- CSS personalizado -->
+  <link href="css/galeria.css" rel="stylesheet">
+
+</head>
+<body class="light-theme">
+
+  <!-- Botão de alternância de tema -->
+  <button class="btn btn-custom btn-toggle-theme" id="toggleThemeBtn">🌙 Modo Escuro</button>
+
+  <!-- Botão voltar -->
+  <a href="../index.html" class="btn btn-custom btn-back">
+    <i class="fas fa-arrow-left"></i> Voltar
+  </a>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4 gallery-title">Galeria de Serviços</h1>
+
+    <!-- Filtros -->
+    <div class="d-flex justify-content-center filter-buttons mb-4 flex-wrap">
+      <button class="btn btn-filter active" data-filter="todos">Todos</button>
+      <button class="btn btn-filter" data-filter="masculino">Masculino</button>
+      <button class="btn btn-filter" data-filter="feminino">Feminino</button>
+    </div>
+
+    <!-- Galeria -->
+    <div id="gallery" class="row g-4">
+      <!-- Cards gerados via JS -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img src="" class="img-fluid w-100" id="modalImage" alt="Imagem ampliada">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+
+  <!-- Script personalizado -->
+  <script src="js/galeria.js"></script>
+</body>
+</html>
